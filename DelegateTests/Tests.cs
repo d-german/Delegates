@@ -35,37 +35,10 @@ namespace DelegateTests
             value = !value;
         }
 
-
         [Test]
         public void MyIntFunctionTest()
         {
-            int LocalSquare(int x)
-            {
-                return x * x;
-            }
-
-            MyIntFunction square1 = Square;
-
-            // evolution of the lambda (fat arrow =>) function 
-            MyIntFunction square2 = delegate(int x) { return x * x; };
-            MyIntFunction square3 = x => { return x * x; };
-            MyIntFunction square4 = x => x * x;
-
-            MyIntFunction square5 = LocalSquare;
-
-
-            Assert.AreEqual(9, Square(3), $"{nameof(Square)} failed.");
-            Assert.AreEqual(9, LocalSquare(3), $"{nameof(LocalSquare)} failed.");
-            Assert.AreEqual(9, square1(3), $"{nameof(square1)} failed.");
-            Assert.AreEqual(9, square2(3), $"{nameof(square2)} failed.");
-            Assert.AreEqual(9, square3(3), $"{nameof(square3)} failed.");
-            Assert.AreEqual(9, square4(3), $"{nameof(square4)} failed.");
-            Assert.AreEqual(9, square5(3), $"{nameof(square5)} failed.");
-
-            Assert.AreEqual(9, MyIntExecutor(square1, 3), $"{nameof(MyIntExecutor)} failed.");
-            Assert.AreEqual(6, MyIntInvoker(Add, 3), $"{nameof(Add)} failed.");
-
-            Assert.AreEqual(9, MyIntInvoker(i => i + i + i, 3));
+            // evolution of the lambda (fat arrow =>) function
         }
 
         [Test]
