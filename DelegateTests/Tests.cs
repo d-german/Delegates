@@ -1,5 +1,4 @@
 using System;
-using Microsoft.VisualStudio.TestPlatform.Common.Utilities;
 using NUnit.Framework;
 
 namespace DelegateTests
