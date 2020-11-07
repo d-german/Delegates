@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateTests", "DelegateTests\DelegateTests.csproj", "{64759400-B258-4161-B018-5F115376E443}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDriver", "DelegateDriver\DelegateDriver.csproj", "{668C69F3-B7DC-443B-81CA-219C6763A789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{64759400-B258-4161-B018-5F115376E443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64759400-B258-4161-B018-5F115376E443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64759400-B258-4161-B018-5F115376E443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{668C69F3-B7DC-443B-81CA-219C6763A789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668C69F3-B7DC-443B-81CA-219C6763A789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668C69F3-B7DC-443B-81CA-219C6763A789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668C69F3-B7DC-443B-81CA-219C6763A789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
