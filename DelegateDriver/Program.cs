@@ -9,18 +9,17 @@ namespace DelegateDriver
         {
             var serviceProvider = ConfigureServiceProvider();
 
-            var myAdder = serviceProvider.GetService<MyAdder>();
-
-            Console.WriteLine(myAdder.AddViaDelegate(1, 1));
-            Console.WriteLine(myAdder.AddViaInterface(1, 1));
+            Console.WriteLine(serviceProvider.GetService<MyAdderInterface>().Add(1, 1));
+            Console.WriteLine(serviceProvider.GetService<MyAdderDelegate>().Add(1, 1));
         }
 
         private static ServiceProvider ConfigureServiceProvider()
         {
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<AdderDelegate>((l, r) => l + r)
                 .AddSingleton<IAdder, Adder>()
-                .AddSingleton<MyAdder>()
+                .AddSingleton<AdderDelegate>((l, r) => l + r)
+                .AddSingleton<MyAdderDelegate>()
+                .AddSingleton<MyAdderInterface>()
                 .BuildServiceProvider();
             return serviceProvider;
         }
