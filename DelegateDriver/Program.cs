@@ -17,11 +17,16 @@ namespace DelegateDriver
         {
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<IAdder, Adder>()
-                .AddSingleton<AdderDelegate>((l, r) => l + r)
+                .AddSingleton<AdderDelegate>(Abc)
                 .AddSingleton<MyAdderDelegate>()
                 .AddSingleton<MyAdderInterface>()
                 .BuildServiceProvider();
             return serviceProvider;
+        }
+
+        private static double Abc(double l, double r)
+        {
+            return l + r;
         }
     }
 }
